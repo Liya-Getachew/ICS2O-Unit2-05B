@@ -18,7 +18,7 @@ if (navigator.serviceWorker) {
 /**
  * This function calculates the pay of the user
  */
- function calculatePay() {
+function calculatePay() {
   // input
   const hours = parseFloat(document.getElementById("hours").value)
   const salary = parseFloat(document.getElementById("salary").value)
