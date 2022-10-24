@@ -52,28 +52,55 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">2-05 with PWA</span>
+          <span class="mdl-layout-title">Salary Program, with PWA</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
+        <h5>Enter your employment information here:</h5>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Numbers of hours worked</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="hours"
+            />
+            <label class="mdl-textfield__label" for="hours"
+              >number of hours ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Hourly rate: $</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="salary"
+            />
+            <label class="mdl-textfield__label" for="salary"
+              >hourly rate ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number</span>
+          </div>
+        </form>
+        <!-- Colored raised button -->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          onclick="calculatePay()"
         >
-          Say "Hello, World!"
+          calculate!
         </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <br />
+        <div id="employment-info">
+          <div id="pay"></div>
+          <div id="taxed"></div>
+        </div>
       </main>
     </div>
   </body>
